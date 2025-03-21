@@ -18,7 +18,7 @@ export default function ChatPage() {
   const data = useSelector((state) => state.chat);
 
   useEffect(() => {
-    const socket = io(SOCKET, {
+    const socket = io("wss://chatapi-nrs0.onrender.com", {
       transports: ["websocket"],
       withCredentials: true,
     });
